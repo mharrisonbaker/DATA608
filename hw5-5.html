@@ -1,0 +1,57 @@
+<html>
+
+    <head>
+        <title> Matthew Baker Matrix of Multiples </title> 
+    </head>
+  
+  <body>
+  </body>
+
+
+<script>
+    //create table
+    var body = document.body;
+    
+    var tbl = document.createElement('table');
+    
+    var tblbody = document.createElement('tbody');
+    tbl.style.width = '100%';
+    tbl.setAttribute('border', '1');
+    
+    for(var i=0; i<4; i++){
+        var tr = tbl.insertRow();
+        for(var j=0; j<5; j++){
+            if(i==3 && j==1){
+                break;
+            } else {
+                var td = tr.insertCell()
+                td.appendChild(document.createTextNode("Cell"));
+                if(i == 1 && j == 1){
+                    td.setAttribute('rowSpan', '5');
+                }
+            }
+        }
+    }
+
+    var inputnum = prompt("Enter your number and it will be multiplied");
+    
+    var a = new Array(20);
+    for(var i=0; i<20; i++){
+    a.push(i*inputnum + inputnum)
+
+        // multiple=i*inputnum + inputnum
+
+        // if ((i % 4 === 0)){
+        //     table.insertRow()
+    }
+
+    //     let newCell = table.rows[i % 4].insertCell();
+    //     newCell.textContent = multiple;;
+    // }
+    
+    body.appendChild(tbl);
+</script>
+
+
+</html>
+
